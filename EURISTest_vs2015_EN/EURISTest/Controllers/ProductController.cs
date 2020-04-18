@@ -10,17 +10,45 @@ namespace EURISTest.Controllers
 {
     public class ProductController : Controller
     {
+        ProductManager productManager = new ProductManager();
+        LocalDbEntities LocalDbEntities = new LocalDbEntities();
         //
         // GET: /Product/
 
         public ActionResult Index()
         {
-            ProductManager productManager = new ProductManager();
             List<Product> products = productManager.GetProducts();
-
             ViewBag.Products = products;
-
             return View();
+
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Product pro)
+        {
+            if (ModelState.IsValid)
+            {
+                productManager.CreateNew(pro);
+            }
+            return View();
+        }
+
+        public ActionResult Edit(int Id)
+        {
+            var model = productManager.GetProduct(Id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int Id)
+        {
+            var model = productManager.GetProduct(Id);
+            return View(model);
         }
 
     }

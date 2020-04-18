@@ -1,0 +1,33 @@
+﻿@*@model EURIS.Entities.LocalDbEntities*@
+@model EURIS.Entities.Product
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Product", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-group">
+        <label for="description">Description:</label>
+        @Html.TextBoxFor(m => m.Description)
+    </div>
+    <div class="form-group">
+        <label for="pwd">Code:</label>
+        @Html.TextBoxFor(m => m.Code)
+    </div>
+    <input type="submit" value="Create" class="btn btn-primary" />
+}
+<div>
+    @Html.ActionLink("Go Back", "Index", "Product", null, new { @class = "ui-button-text" })
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

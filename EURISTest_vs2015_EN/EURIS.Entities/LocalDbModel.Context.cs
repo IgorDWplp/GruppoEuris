@@ -18,12 +18,15 @@ namespace EURIS.Entities
         public LocalDbEntities()
             : base("name=LocalDbEntities")
         {
+           // Database.SetInitializer<LocalDbEntities>(new DropCreateDatabaseAlways<LocalDbEntities>());
+            this.Configuration.LazyLoadingEnabled = true;
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    throw new UnintentionalCodeFirstException();
+        //}
     
         public DbSet<Product> Product { get; set; }
     }

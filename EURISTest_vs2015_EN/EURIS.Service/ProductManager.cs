@@ -63,10 +63,39 @@ namespace EURIS.Service
         public Product GetProduct(int Id)
         {
            // var pro = context.Product.Where(pr => pr.Id == Id).FirstOrDefault();
+         
             var product = context.Product.Find(Id);
             return product;
         }
 
+        /// <summary>
+        /// update product
+        /// </summary>
+        /// <param name="product"></param>
+        public bool UpdateProduct(Product product)
+        {
+            var FindProduct = context.Product.Find(product.Id);
+            if(FindProduct != null)
+            {
+                FindProduct.Code = product.Code;
+                FindProduct.Description = product.Description;
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool Delete(Product product)
+        {
+            var FindProduct = context.Product.Where(a => a.Id == product.Id).First();
+            if (FindProduct != null)
+            {
+                context.Product.Remove(FindProduct);
+                context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
 
         #endregion
     }

@@ -13,6 +13,18 @@ namespace EURISTest
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+              routes.MapRoute(
+                  name: "404-NotFound",
+                  url: "NotFound",
+                  defaults: new { controller = "Error", action = "NotFound" }
+             );
+
+            routes.MapRoute(
+                 name: "500-Error",
+                 url: "Error",
+                 defaults: new { controller = "Error", action = "ErrorR" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

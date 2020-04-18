@@ -1,2 +1,0 @@
-# GruppoEuris
-Gruppo_Euris

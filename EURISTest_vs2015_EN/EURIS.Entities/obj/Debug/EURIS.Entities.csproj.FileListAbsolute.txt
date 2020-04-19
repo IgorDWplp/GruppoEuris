@@ -7,3 +7,4 @@ C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\o
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.csproj.CopyComplete
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.dll
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.pdb
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.csprojAssemblyReference.cache

@@ -9,25 +9,23 @@
 
 namespace EURIS.Entities
 {
-    using System;
     using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
+
+
+
     public partial class LocalDbEntities : DbContext
     {
         public LocalDbEntities()
             : base("name=LocalDbEntities")
         {
-           // Database.SetInitializer<LocalDbEntities>(new DropCreateDatabaseAlways<LocalDbEntities>());
+            Database.SetInitializer<LocalDbEntities>(new DropCreateDatabaseAlways<LocalDbEntities>());
             this.Configuration.LazyLoadingEnabled = true;
             this.Configuration.ProxyCreationEnabled = false;
         }
     
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    throw new UnintentionalCodeFirstException();
-        //}
     
         public DbSet<Product> Product { get; set; }
+
+
     }
 }

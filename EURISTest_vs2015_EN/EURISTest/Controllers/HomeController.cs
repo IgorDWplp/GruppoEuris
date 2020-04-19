@@ -13,8 +13,13 @@ namespace EURIS.Test.Controllers
     {
         public ActionResult Index()
         {
-            DbContextApp dbContextApp = new DbContextApp();
-            ViewBag.Message = "Welcome to the EURIS Group ASP.NET MVC developer test application.";
+            // DbContextApp dbContextApp = new DbContextApp();
+            LocalDbEntities LocalDbEntities = new LocalDbEntities();
+            SeedDB seedDB = new SeedDB();
+            seedDB.SeedData(LocalDbEntities);
+
+
+            ViewBag.Message = "Upravo ste unjeli proizvode!";
             return View();
         }
 

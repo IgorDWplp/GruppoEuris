@@ -5,22 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using EURIS.Entities;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using EURIS.Entities.Model;
 
 namespace EURIS.Service
 {
     public class ProductManager
     {
 
-        #region orginal code + extra features
+        #region orginal code + extra features CRUD
         LocalDbEntities context = new LocalDbEntities(); 
 
         public List<Product> GetProducts()
         {
             List<Product> products = new List<Product>();
-            
             products = (from item in context.Product
                         select item).ToList();
-
+         
             return products;
         }
 
@@ -97,6 +98,43 @@ namespace EURIS.Service
             return false;
         }
 
+        #endregion
+
+
+        #region seed for orginal
+
+       public void Seed(LocalDbEntities context)
+        {
+
+      
+            Product product1 = new Product()
+            {
+                Code = "code1",
+                Description = "Opis prvog",
+                Id = 0
+            };
+
+            Product product2 = new Product()  {
+                Code = "code2",
+                Description = "Opis drugog ",
+                Id = 1 
+            };
+
+            Product product3 = new Product  {
+                Code = "code 3", Description = "", Id = 2
+            };
+
+
+            context.Product.Add(product1);
+            context.Product.Add(product2);
+            context.Product.Add(product3);
+
+            context.SaveChanges();
+
+          
+        }
+
+       
         #endregion
     }
 }

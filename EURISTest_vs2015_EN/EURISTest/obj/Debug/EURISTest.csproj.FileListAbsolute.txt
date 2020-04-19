@@ -95,3 +95,8 @@ C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\De
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.csproj.CopyComplete
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.dll
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.pdb
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\EURIS.Service.dll.config
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\PagedList.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\PagedList.Mvc.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\PagedList.xml
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\PagedList.Mvc.xml

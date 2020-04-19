@@ -1,0 +1,44 @@
+﻿@model IEnumerable<EURIS.Entities.Product>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+
+</head>
+<body>
+    <table class="table">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Code
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+            </tr>
+
+        }
+    </table>
+</body>
+</html>

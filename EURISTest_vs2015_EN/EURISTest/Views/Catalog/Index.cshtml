@@ -16,10 +16,10 @@
 <div class="form-group">
     @using (Html.BeginForm("Index", "Catalog", FormMethod.Get))
     {
-        <input type="text" name="search" value="Code..." id="codeSearch"/>
-        <input type="submit"  value="Search" />
+        <input type="text" name="search" value="Code..." id="codeSearch" />
+        <input type="submit" value="Search" />
     }
-
+    @Html.ActionLink("Download PDF catalog", "PrintViewToPdf")
 </div>
 <table class="table">
     <tr>

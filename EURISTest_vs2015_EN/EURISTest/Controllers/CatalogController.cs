@@ -9,6 +9,7 @@ using EURIS.Entities;
 using EURIS.Service;
 using PagedList.Mvc;
 using PagedList;
+using Rotativa;
 
 namespace EURISTest.Controllers
 {
@@ -16,8 +17,6 @@ namespace EURISTest.Controllers
     {
         private LocalDbEntities db = new LocalDbEntities();
 
-        //
-        // GET: /Catalog/
 
         public ActionResult Index(string sort, string search, int? page)
         {
@@ -79,103 +78,24 @@ namespace EURISTest.Controllers
             return View(model.ToList().ToPagedList(page ?? 1, pageSize));
         }
 
-        //
-        // GET: /Catalog/Details/5
-
-        public ActionResult Details(int id = 0)
+        /// <summary>
+        /// view just for PDF
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult ViewProducts()
         {
-            Product product = db.Product.Find(id);
-            if (product == null)
-            {
-                return HttpNotFound();
-            }
-            return View(product);
+            var model = db.Product.ToList();
+            return View(model);
+
         }
 
-        //
-        // GET: /Catalog/Create
-
-        public ActionResult Create()
+        public ActionResult PrintViewToPdf()
         {
-            return View();
+            var report = new ActionAsPdf("ViewProducts");
+            return report;
         }
 
-        //
-        // POST: /Catalog/Create
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Product.Add(product);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
 
-            return View(product);
-        }
-
-        //
-        // GET: /Catalog/Edit/5
-
-        public ActionResult Edit(int id = 0)
-        {
-            Product product = db.Product.Find(id);
-            if (product == null)
-            {
-                return HttpNotFound();
-            }
-            return View(product);
-        }
-
-        //
-        // POST: /Catalog/Edit/5
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Product product)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(product).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(product);
-        }
-
-        //
-        // GET: /Catalog/Delete/5
-
-        public ActionResult Delete(int id = 0)
-        {
-            Product product = db.Product.Find(id);
-            if (product == null)
-            {
-                return HttpNotFound();
-            }
-            return View(product);
-        }
-
-        //
-        // POST: /Catalog/Delete/5
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            Product product = db.Product.Find(id);
-            db.Product.Remove(product);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
     }
 }

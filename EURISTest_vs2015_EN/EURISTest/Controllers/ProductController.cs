@@ -13,8 +13,6 @@ namespace EURISTest.Controllers
     {
         ProductManager productManager = new ProductManager();
         LocalDbEntities LocalDbEntities = new LocalDbEntities();
-        //
-        // GET: /Product/
 
         public ActionResult Index()
         {
@@ -30,6 +28,7 @@ namespace EURISTest.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Product pro)
         {
             if (ModelState.IsValid)
@@ -58,6 +57,7 @@ namespace EURISTest.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Edit(Product product)
         {
             if (ModelState.IsValid)
@@ -89,7 +89,6 @@ namespace EURISTest.Controllers
             return View(model);
         }
 
-
         public ActionResult Delete(int? Id)
         {
             int ID = Id.GetValueOrDefault();
@@ -97,7 +96,11 @@ namespace EURISTest.Controllers
             return View(model);
         }
 
-        
+        /// <summary>
+        /// calling this by route
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult DeleteProduct(int id)
         {
             Product product = new Product();

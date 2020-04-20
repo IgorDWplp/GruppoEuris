@@ -14,8 +14,10 @@ namespace EURIS.Service
     {
 
         #region orginal code + extra features CRUD
-        LocalDbEntities context = new LocalDbEntities(); 
 
+
+        LocalDbEntities context = new LocalDbEntities();
+       
         public List<Product> GetProducts()
         {
             List<Product> products = new List<Product>();
@@ -101,9 +103,114 @@ namespace EURIS.Service
         #endregion
 
 
+        #region my code CRUD for products
+        DbContextApp dbContextApp = new DbContextApp();
+
+        #endregion
+
+        public List<ProductE> GetMyProducts()
+        {
+            List<ProductE> products = new List<ProductE>();
+            products = (from item in dbContextApp.ProductsE
+                        select item).ToList();
+
+            return products;
+        }
+
+        public void CreateNewMyProduct(ProductE product)
+        {
+            dbContextApp.ProductsE.Add(product);
+            dbContextApp.SaveChanges();
+        }
+
+        public ProductE GetMyProduct(int Id)
+        {
+            var product = dbContextApp.ProductsE.Find(Id);
+            return product;
+        }
+
+        public bool UpdateMyProduct(ProductE product)
+        {
+            var FindProduct = dbContextApp.ProductsE.Find(product.Id);
+            if (FindProduct != null)
+            {
+                FindProduct.Code = product.Code;
+                FindProduct.Description = product.Description;
+                dbContextApp.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteMyProduct(ProductE product)
+        {
+            var FindProduct = dbContextApp.ProductsE.Where(a => a.Id == product.Id).First();
+            if (FindProduct != null)
+            {
+                dbContextApp.ProductsE.Remove(FindProduct);
+                dbContextApp.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+
+        #region my code CRUD for category - catalog
+
+        public List<CatalogProductsE> GetMyCatlog()
+        {
+            List<CatalogProductsE> catalogs = new List<CatalogProductsE>();
+            catalogs = (from item in dbContextApp.catalogProductEs
+                        select item).ToList();
+            return catalogs;
+        }
+
+        public void CreateNewMyCatalog(CatalogProductsE catalog)
+        {
+            dbContextApp.catalogProductEs.Add(catalog);
+            dbContextApp.SaveChanges();
+        }
+
+        public CatalogProductsE GetMyCatalog(int Id)
+        {
+            var catalog = dbContextApp.catalogProductEs.Find(Id);
+            return catalog;
+        }
+
+        public bool UpdateMyCatalog(CatalogProductsE catalog)
+        {
+            var FindCatalog = dbContextApp.catalogProductEs.Find(catalog.Id);
+            if (FindCatalog != null)
+            {
+                FindCatalog.Code = catalog.Code;
+                FindCatalog.Description = catalog.Description;
+                dbContextApp.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool DeleteMyCatalog(CatalogProductsE catalog)
+        {
+          
+            var FindCatalog = dbContextApp.catalogProductEs.Where(a => a.Id == catalog.Id).First();
+            var FindProducts_with_Catalog = dbContextApp.ProductsE.Where(a => a.fk_catalogID == catalog.Id).FirstOrDefault();
+            if (FindCatalog != null)
+            {
+                dbContextApp.catalogProductEs.Remove(FindCatalog);
+                dbContextApp.ProductsE.Remove(FindProducts_with_Catalog);
+                dbContextApp.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+
+        #endregion
+
         #region seed for orginal
 
-       public void Seed(LocalDbEntities context)
+        public void Seed(LocalDbEntities context)
         {
 
       
@@ -134,7 +241,8 @@ namespace EURIS.Service
           
         }
 
-       
+
         #endregion
+
     }
 }

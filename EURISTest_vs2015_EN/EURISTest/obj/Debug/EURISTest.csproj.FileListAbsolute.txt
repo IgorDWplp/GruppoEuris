@@ -100,6 +100,14 @@ C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\De
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.csproj.CopyComplete
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.pdb
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\Microsoft.Web.Helpers.dll
-C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\Rotativa.dll
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\EntityFramework.SqlServer.dll
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\EntityFramework.SqlServer.xml
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.csproj.App.config
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\Rotativa.Core.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\Rotativa.MVC.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\System.Net.Http.Extensions.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\System.Net.Http.Primitives.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\Antlr3.Runtime.pdb
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\System.Net.Http.Extensions.xml
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\System.Net.Http.Primitives.xml
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\System.Web.Optimization.xml

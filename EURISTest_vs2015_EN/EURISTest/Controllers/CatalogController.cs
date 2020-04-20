@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using EURIS.Entities;
-using EURIS.Service;
-using PagedList.Mvc;
 using PagedList;
 using Rotativa;
+using Rotativa.MVC;
 
 namespace EURISTest.Controllers
 {
@@ -17,10 +13,8 @@ namespace EURISTest.Controllers
     {
         private LocalDbEntities db = new LocalDbEntities();
 
-
         public ActionResult Index(string sort, string search, int? page)
         {
-           
             ViewData["CodeSortParm"] = String.IsNullOrEmpty(sort) ? "code_desc" : "";
             ViewData["IDSortParm"] = String.IsNullOrEmpty(sort) ? "ID_desc" : "";
             ViewData["filterResult"] = null;
@@ -40,7 +34,6 @@ namespace EURISTest.Controllers
             //no matter what, this code is fill a container
             var model = db.Product.ToList();
             int pageSize = 3;
-
 
             //in search case 
             if (!string.IsNullOrEmpty(search))
@@ -86,7 +79,6 @@ namespace EURISTest.Controllers
         {
             var model = db.Product.ToList();
             return View(model);
-
         }
 
         public ActionResult PrintViewToPdf()

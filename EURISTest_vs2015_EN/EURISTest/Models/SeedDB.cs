@@ -10,7 +10,6 @@ namespace EURIS.Entities.Model
   public  class SeedDB : DropCreateDatabaseIfModelChanges<LocalDbEntities>
     {
 
-
         public void SeedData(LocalDbEntities context)
         {
 

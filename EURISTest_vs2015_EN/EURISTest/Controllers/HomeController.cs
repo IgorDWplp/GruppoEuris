@@ -14,12 +14,19 @@ namespace EURIS.Test.Controllers
         public ActionResult Index()
         {
             // DbContextApp dbContextApp = new DbContextApp();
-            LocalDbEntities LocalDbEntities = new LocalDbEntities();
-            SeedDB seedDB = new SeedDB();
-            seedDB.SeedData(LocalDbEntities);
 
 
-            ViewBag.Message = "Upravo ste unjeli proizvode!";
+            using (LocalDbEntities LocalDbEntities = new LocalDbEntities())
+            {
+                var check = LocalDbEntities.Product.Where(x => x.Id > 0).FirstOrDefault();
+                if(check == null)
+                {
+                    SeedDB seedDB = new SeedDB();
+                    seedDB.SeedData(LocalDbEntities);
+                    ViewBag.Message = "Upravo ste unjeli proizvode!";
+                }
+            }
+            ViewBag.Message = "Hello";
             return View();
         }
 

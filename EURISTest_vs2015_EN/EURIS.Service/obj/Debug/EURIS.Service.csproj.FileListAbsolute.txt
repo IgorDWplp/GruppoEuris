@@ -11,3 +11,5 @@ C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Service\ob
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Service\obj\Debug\EURIS.Service.csproj.CopyComplete
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Service\obj\Debug\EURIS.Service.dll
 C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Service\obj\Debug\EURIS.Service.pdb
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\IGZYY\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Service\bin\Debug\EntityFramework.SqlServer.xml

@@ -62,7 +62,7 @@ namespace EURISTest.Controllers
         {
             if (ModelState.IsValid)
             {
-              if( productManager.UpdateProduct(product))
+              if(productManager.UpdateProduct(product))
                 {
                     return RedirectToAction("Index", "Product");
                 }

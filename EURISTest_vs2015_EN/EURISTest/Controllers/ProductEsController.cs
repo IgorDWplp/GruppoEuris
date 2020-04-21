@@ -55,8 +55,6 @@ namespace EURISTest.Controllers
         }
 
         // POST: ProductEs/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Code,Description,fk_catalogID")] ProductE productE)
@@ -91,8 +89,6 @@ namespace EURISTest.Controllers
         }
 
         // POST: ProductEs/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Code,Description,fk_catalogID")] ProductE productE)

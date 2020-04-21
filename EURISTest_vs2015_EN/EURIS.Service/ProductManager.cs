@@ -102,11 +102,8 @@ namespace EURIS.Service
 
         #endregion
 
-
         #region my code CRUD for products
         DbContextApp dbContextApp = new DbContextApp();
-
-        #endregion
 
         public List<ProductE> GetMyProducts()
         {
@@ -153,7 +150,7 @@ namespace EURIS.Service
             }
             return false;
         }
-
+        #endregion
 
         #region my code CRUD for category - catalog
 
@@ -204,43 +201,6 @@ namespace EURIS.Service
             }
             return false;
         }
-
-
-        #endregion
-
-        #region seed for orginal
-
-        public void Seed(LocalDbEntities context)
-        {
-
-      
-            Product product1 = new Product()
-            {
-                Code = "code1",
-                Description = "Opis prvog",
-                Id = 0
-            };
-
-            Product product2 = new Product()  {
-                Code = "code2",
-                Description = "Opis drugog ",
-                Id = 1 
-            };
-
-            Product product3 = new Product  {
-                Code = "code 3", Description = "", Id = 2
-            };
-
-
-            context.Product.Add(product1);
-            context.Product.Add(product2);
-            context.Product.Add(product3);
-
-            context.SaveChanges();
-
-          
-        }
-
 
         #endregion
 

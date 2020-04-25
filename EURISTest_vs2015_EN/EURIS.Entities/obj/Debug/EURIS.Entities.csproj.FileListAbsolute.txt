@@ -3,8 +3,10 @@ C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\b
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\bin\Debug\EURIS.Entities.pdb
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\bin\Debug\EntityFramework.dll
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\bin\Debug\EntityFramework.xml
-C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.csprojAssemblyReference.cache
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.csproj.CoreCompileInputs.cache
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.csproj.CopyComplete
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.dll
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.pdb
+C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\obj\Debug\EURIS.Entities.csprojAssemblyReference.cache
+C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\bin\Debug\LocalDb.mdf
+C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\bin\Debug\LocalDb_log.ldf

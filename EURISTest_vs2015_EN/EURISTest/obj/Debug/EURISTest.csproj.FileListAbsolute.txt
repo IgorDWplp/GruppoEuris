@@ -95,3 +95,5 @@ C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\De
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.csproj.CopyComplete
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.dll
 C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\obj\Debug\EURISTest.pdb
+C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\LocalDb.mdf
+C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURISTest\bin\LocalDb_log.ldf

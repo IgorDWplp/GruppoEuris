@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\andrea\Documents\EURIS\Test ingresso\_Original\EURISTest_vs2015_EN\EURIS.Entities\LocalDbModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Igzyy\Documents\GitHub\GruppoEuris\EURISTest_vs2015_EN\EURIS.Entities\Model_1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

@@ -13,10 +13,10 @@ namespace EURIS.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LocalDbEntities : DbContext
+    public partial class LocalDbEntities1 : DbContext
     {
-        public LocalDbEntities()
-            : base("name=LocalDbEntities")
+        public LocalDbEntities1()
+            : base("name=LocalDbEntities1")
         {
         }
     
@@ -25,6 +25,6 @@ namespace EURIS.Entities
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Product> Product { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

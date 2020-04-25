@@ -15,10 +15,10 @@ namespace EURISTest.Controllers
 
         public ActionResult Index()
         {
-            ProductManager productManager = new ProductManager();
-            List<Product> products = productManager.GetProducts();
+            //ProductManager productManager = new ProductManager();
+            //List<Product> products = productManager.GetProducts();
 
-            ViewBag.Products = products;
+            //ViewBag.Products = products;
 
             return View();
         }

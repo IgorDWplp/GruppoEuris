@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using EURIS.Entities;
 using System.Data.Entity;
+using EURIS.Entities.Model;
 
 namespace EURIS.Service
 {
     public class ProductManager
     {
-        LocalDbEntities context = new LocalDbEntities(); 
+       // LocalDbEntities context = new LocalDbEntities();
+        DbContextApp DbContextApp = new DbContextApp();
 
-        public List<Product> GetProducts()
+        public List<Entities.Model.Product> GetProducts()
         {
-            List<Product> products = new List<Product>();
+            List<Entities.Model.Product> products = new List<Entities.Model.Product>();
             
-            products = (from item in context.Product
+            products = (from item in DbContextApp.products
                         select item).ToList();
 
             return products;

@@ -1,0 +1,32 @@
+﻿@model EURIS.Entities.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details of product - @Html.DisplayFor(model => model.Code)</h2>
+
+
+
+<fieldset>
+
+    <div class="form-group">
+        <label for="description">Description:</label>
+        @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="form-group">
+        <label for="description">Code:</label>
+        @Html.DisplayFor(model => model.Code)
+    </div>
+</fieldset>
+
+
+
+
+<div>
+    <input type="button" class="btn btn-light" value="Edit" onclick="window.location.href='/Product/Edit/@Model.Id'" />
+    <input type="button" class="btn btn-primary" value="Go to List" onclick="window.location.href='/Product/'" />
+</div>
+
+
